@@ -35,7 +35,7 @@ function Home() {
         <input type="text" name='nick' placeholder='nick' onChange={e => setNick(e.target.value)}  />
         <input type="email" name='email' placeholder='Email' onChange={e => setEmail(e.target.value)}/>
         <input type="password" name='senha' placeholder='Senha' onChange= {e => setPassword(e.target.value)} />
-        <button onClick={handlerSubmit}>Enviar</button>
+        <button type="submit" onClick={handlerSubmit}>Enviar</button>
 
       </form>
     </div>

@@ -1,15 +1,22 @@
 import React from "react";
+import Input from "../../Components/Input";
+import Button from "../../Components/Button";
 
 const CardsAdd = () => {
     return (
-        <div>
-            <h1>Add a New Card</h1>
+        <div className="bg-sky-500/50 h-96">
+            
             {/* Add your form or card creation UI here */}
             <h1 className="text-3xl text-red-100 font-bold underline">
-                <p class="text-blue-600 dark:text-sky-400">The quick brown fox...</p>
-
-    Hello world!
+Adicionar cards
+   
   </h1>
+  <Input />
+  <Input />
+  <Input />
+  <Input />
+  <Input />
+  <Button />
         </div>
     );
 };

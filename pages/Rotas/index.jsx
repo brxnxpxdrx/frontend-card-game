@@ -5,7 +5,7 @@ import CardsAdd from "../CardsAdd/index.jsx";
 
 const Rotas = () => {
   return (
-    <div>
+    <div className="bg-sky-500/50">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

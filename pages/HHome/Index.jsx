@@ -29,7 +29,7 @@ function Home() {
   }, [])
 
   return (
-    <div className='Container'>
+    <div className='Container bg-sky-500/50'>
       <form>
         <h1>Cadastro de Usuários</h1>
         <input type="text" name='nick' placeholder='nick' onChange={e => setNick(e.target.value)}  />

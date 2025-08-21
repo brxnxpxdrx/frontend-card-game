@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../HHome/Index.jsx";
 import CardsAdd from "../CardsAdd/index.jsx";
+import Teste from "../Teste/index.jsx";
 
 const Rotas = () => {
   return (
@@ -10,6 +11,7 @@ const Rotas = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/card" element={<CardsAdd />} />
+          <Route path="/teste" element={<Teste />} />
         </Routes>
       </BrowserRouter>
     </div>

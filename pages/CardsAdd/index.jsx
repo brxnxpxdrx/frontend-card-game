@@ -9,8 +9,8 @@ const CardsAdd = () => {
     const [description, setDescription] = useState('');
     const [image, setImage] = useState(''); 
     const [tipo, setTipo] = useState('');
-    const [atk, setAtk] = useState('');         
-    const [def, setDef] = useState('');
+    const [atk, setAtk] = useState(0);         
+    const [def, setDef] = useState(0);
     const  [cards, setCards] = useState([])
     const [img, setImg] = useState('https://youtooz.com/cdn/shop/products/yugioh_darkmagician_characterai_es_1000x1000_min-8qxy.png?v=1684524635');
 
@@ -18,9 +18,12 @@ const CardsAdd = () => {
         e.preventDefault(); 
        
        
-          setCards( {name, description, image, tipo, atk, def} );
-            setImg(image);
-        await api.post('/cards', cards) // envia o post
+    const newCard = { "name" : name, "description" : description, "image" : image, "tipo" : tipo, "atk" : parseInt(atk), "def" : parseInt(def) };
+setCards(newCard); // atualiza localmente se quiser
+setImg(image);
+
+await api.post('/cards-add', newCard); // envia corretamente
+console.log(newCard);
           console.log(cards)
     }
     console.log(name)

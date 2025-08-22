@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "../../Components/Input";
 import Button from "../../Components/Button";
+import api from "../../src/services/api";
 
 const CardsAdd = () => {
     const [name, setName] = useState('');
@@ -11,11 +12,12 @@ const CardsAdd = () => {
     const [def, setDef] = useState('');
     const  [cards, setCards] = useState([])
 
-    const handlerSubmit = (e) => {
+    const handlerSubmit = async (e) => {
         e.preventDefault(); 
        
        
           setCards( {name, description, image, tipo, atk, def} );
+        await api.post('/cards', cards) // envia o post
           console.log(cards)
     }
     console.log(name)

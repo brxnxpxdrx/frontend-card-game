@@ -93,5 +93,3 @@ Desenvolvido por **[brxnxpxdrx](https://github.com/brxnxpxdrx)**
 
 ```
 
-Quer que eu já gere esse arquivo `README.md` pronto pra você baixar e colocar direto no repositório?
-```
